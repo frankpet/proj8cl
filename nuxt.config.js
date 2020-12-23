@@ -1,4 +1,9 @@
+const pkg = require('./package')
+const env = require('dotenv').config()
+
 export default {
+
+  env: env.parsed,
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     title: 'proj8cl',
@@ -24,6 +29,10 @@ export default {
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
   ],
+
+  eslint: {
+    fix: true
+  },
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
